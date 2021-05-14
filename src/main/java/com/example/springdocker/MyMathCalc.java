@@ -17,7 +17,7 @@ public class MyMathCalc {
     }
 
 
-    public float divide(float a, float b) {
+    public int divide(int a, int b) {
         return a/b;
     }
 
