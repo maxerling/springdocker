@@ -1,7 +1,6 @@
 package com.example.springdocker.service;
 
 import com.example.springdocker.model.Person;
-import com.example.springdocker.repository.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +13,7 @@ import java.util.stream.Collectors;
  * Copyright: MIT
  * Class: Java20B
  */
+/*
 @RequiredArgsConstructor
 @Service
 public class PersonService {
@@ -36,4 +36,4 @@ public class PersonService {
     }
 
 
-}
+}*/

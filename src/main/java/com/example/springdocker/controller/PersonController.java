@@ -1,7 +1,6 @@
 package com.example.springdocker.controller;
 
 import com.example.springdocker.model.Person;
-import com.example.springdocker.service.PersonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +15,7 @@ import java.util.List;
  * Copyright: MIT
  * Class: Java20B
  */
+/*
 @RequiredArgsConstructor
 @RestController
 public class PersonController {
@@ -34,4 +34,4 @@ public class PersonController {
             return service.getPeople18AndAbove();
         }
 
-}
+}*/

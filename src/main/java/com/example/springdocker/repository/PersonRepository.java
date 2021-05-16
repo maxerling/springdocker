@@ -13,7 +13,9 @@ import java.util.List;
  * Copyright: MIT
  * Class: Java20B
  */
+
+/*
 @Repository
 public interface PersonRepository extends MongoRepository<Person, String> {
     List<Person> findPeopleBy18andAbove(boolean adult);
-}
+}*/
