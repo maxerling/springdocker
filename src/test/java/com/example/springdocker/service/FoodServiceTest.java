@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Arrays;
 import java.util.List;
@@ -62,8 +63,34 @@ class FoodServiceTest {
     }
 
     @Test
-    public void saveNewFoodTest() {
+    public void saveNewFoodSuccessfulTest() {
+        Food mockFood = new Food("1","chicken",true,true);
+        when(mockRepository.save(any())).thenReturn(mockFood);
 
-        //foodService.saveNewFood();
+        Food actual = foodService.saveNewFood(mockFood);
+
+        assertEquals(mockFood,actual);
+        verify(mockRepository).save(any());
+    }
+
+    @Test
+    public void saveNewFoodInvalidTest() {
+        //3:04:14
+        Food mockFood = new Food("1","chicken",true,true);
+
+        assertThrows(ResponseStatusException.class, () -> foodService.saveNewFood(mockFood));
+
+        verify(mockRepository, times(0)).save(any());
+    }
+
+    @Test
+    public void saveNewFoodExistingTest() {
+        //4:22:50
+        Food mockFood = new Food("1","chicken",true,true);
+        when(mockRepository.save(any())).thenReturn(mockFood);
+
+        assertThrows(ResponseStatusException.class, () -> foodService.saveNewFood(mockFood));
+
+        verify(mockRepository, times(0)).save(any());
     }
 }
