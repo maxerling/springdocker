@@ -23,6 +23,12 @@ services:
     depends_on:
       - mongo
 
+  myApp:
+    image: p2
+    ports:
+      - 8083:8080
+    depends_on:
+      - mongo
 
 volumes:
    mongo-data:

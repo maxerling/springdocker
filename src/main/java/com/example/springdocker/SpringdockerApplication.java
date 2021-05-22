@@ -2,8 +2,9 @@ package com.example.springdocker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 
-@SpringBootApplication
+@SpringBootApplication()
 public class SpringdockerApplication {
 
     public static void main(String[] args) {
